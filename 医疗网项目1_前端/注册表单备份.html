@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册表单</title>
+    <!--<link rel="stylesheet" type="text/css" href="注册表单.css">-->
+
+
+</head>
+<body >
+
+    <div class="header"><hr/></div>
+    <div class="container">
+        <div>
+            <!--<form action="javascript:alert('提交成功 ')" method="post" name="MyForm" onsubmit="return checkSubmit()" >-->
+            <form action="#" method="post" name="MyForm" onsubmit="return checkSubmit()" >
+                <!--上面的属性中，onsublimit就是在sublimit按下时触发，这个return 的作用就是，控制只有在这个函数运行之后，再执行动作，-->
+                <!--如果没有return 则动作和action 会同时执行-->
+                <table >
+                    <tr>
+                        <td>用户名：</td>
+                        <td>
+                            <input type="text" name="uname" id="uname" alt="用户名" placeholder="请输入用户名" onblur="checkUsername();"/>
+                            <span id="unameSpan"> </span><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>输入密码：</td>
+                        <td>
+                            <input type="password" name="upwd" id="upwd" alt="密码" placeholder="请输入密码" onblur="checkPassword();"/>
+                            <span id="upwdSpan"> </span><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>确认密码：</td>
+                        <td>
+                            <input type="password" name="qrpwd" id="qrpwd" alt="重复密码" placeholder="请再次输入密码" onblur="checkSames(this);"/>
+                            <span id="qrpwdSpan"> </span><br />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>真实姓名：</td>
+                        <td>
+                            <input type="text" name="tname" id="tname" alt="真实姓名" placeholder="请输入真实姓名" onblur="checkTruename();"/>
+                            <span id="tnameSpan"> </span><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>性别：</td>
+                        <td>
+                            <input type="radio" name="sex"  class="sex" value="男" alt="性别"  onblur="checkSex(this);"/>男
+                            <input type="radio" name="sex"  class="sex" value="女" alt="性别"  onblur="checkSex(this);"/>女
+                            <span id="sexSpan"> </span><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>出生日期：</td>
+                        <td>
+                            <input type="text" name="age" id="age" alt="出生日期" placeholder="请输入出生日期" onblur="checkAge(this);"/>
+                            <span id="ageSpan"> </span><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>电子邮箱：</td>
+                        <td>
+                            <input type="text" name="email" id="email" alt="电子邮箱" placeholder="请输入邮箱" onblur="checkEmail();"/>
+                            <span id="emailSpan"> </span><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>手机号码：</td>
+                        <td>
+                            <input type="text" name="phone" id="phone" alt="手机号" placeholder="请输入手机号码" onblur="checkPhone();"/>
+                            <span id="phoneSpan"> </span><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>血型：</td>
+                        <td>
+                            <select>
+                                <option value="">请选择</option>
+                                <option value ="A">A</option>
+                                <option value ="B">B</option>
+                                <option value="O">O</option>
+                                <option value="AB">AB</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>籍贯：</td>
+                        <td>
+                            <select>
+                                <option value="">请选择</option>
+                                <option value ="北京">北京</option>
+                                <option value ="山西">山西</option>
+                                <option value="台湾">台湾</option>
+                                <option value="上海">上海</option>
+                                <option value="香港">香港</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                        <td>
+                            <input type="radio" name="Text"  class="Text" value="文件" alt="确认文件"  onblur="checkText(this);"/>是否同意《用户信息保密协议》
+                            <span id="TextSpan"> </span><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                        <td>
+                            <input type="submit" name="subm" id="subm" class="butt"
+                                   value="提交" onmouseover="changeColorOver(this)"
+                                   onmouseout="changeColorOut(this)"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="reset" name="res" id="res" class="butt"
+                                   value="重置" onmouseover="changeColorOver(this)"
+                                   onmouseout="changeColorOut(this)"/>
+                            <script >
+                                // 按钮监测
+                                // 不知为何，这个script不能放在.js文件中不起作用，索性放在这个按钮定义的下面吧
+
+                                //问题已解决：因为代码是一行一行解析的，放在.js文件中的代码，在body开始执行之前
+                                //就执行了，而正确的顺序是只有在HTML代码执行之后，再开启js就可以了。
+                                //如果你非要将动作代码放到.js文件中，那么就用到 windos.onload = function(); 了
+                                //他的意思是 在你所有的东西都加载完成之后，再执行动作代码
+
+                                function changeColorOver(butt){
+                                    //鼠标滑过按钮时，按钮变色
+                                    butt.style.background = "green";
+                                }
+                                function changeColorOut(butt){
+                                    butt.style.background = ""
+                                }
+
+                            </script>
+                        </td>
+                    </tr>
+                </table>
+
+
+
+            </form>
+        </div>
+    </div>
+    <!--<div id="banner">作为注册主页</div>-->
+    <div class="footer"><hr/></div>
+
+</body>
+<script src="注册表检测2.js">    </script>
+</html>

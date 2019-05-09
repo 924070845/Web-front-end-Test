@@ -1,0 +1,88 @@
+#container{
+    width: 1000px;
+    margin: 0 auto;/*表示上下为0，左右自动对齐的方式，也就是居中*/
+}
+tr{
+    line-height: 30px;
+}
+#header{
+    width: 1002px;
+    height: 237px;
+    background: url("页头背景.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    /*表示背景中的图片即使选择的大小不合适，也不进行填充式的重复*/
+    /*text-align: center;*/
+}
+#nav{
+    width: 100%;
+    background-color: #8edff3;
+}
+#navleft {
+    /*background-color: #d7f3ff;*/
+    float: left;
+}
+
+
+#navleft table td{
+    width: 100px;
+    height: 30px;
+    border-right: 1px solid  #969696;
+    /*上面这句是定义的表格只显示右边框，宽度为1*/
+    text-align: center;
+}
+a.caidan{
+    color: #000000;
+    text-decoration: none;
+}
+a.caidan:hover{
+    /*font-size: 110%;*/
+    color: #60bff2;
+
+}
+
+#navright{
+    float: right;
+    height: 30px;
+}
+#main{
+    width: 1002px;
+    height: 600px;
+}
+#left{
+    width: 660px;
+    height: 560px;
+    float: left;
+}
+#right{
+    width: 340px;
+    height: 560px;
+    background:#EEE;
+    float: left;
+}
+.one{
+    width: 260px;
+    height: 260px;
+    background: #EEE;
+    float: left;
+    border: 1px solid #EEE;
+    margin: 10px;
+    padding-left:10px;
+    overflow: auto;
+}
+
+.two{
+    width: 340px;
+    height: 280px;
+    /*align-self: center;*/
+    /*image-position: center;*/
+    text-align: center;
+    overflow: auto;
+}
+#footer{
+    color: #00B3EA;
+    text-align: center;
+}
+#footer hr{
+    color: #036EB7;
+}

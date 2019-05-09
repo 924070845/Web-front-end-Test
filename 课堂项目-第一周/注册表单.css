@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    background-color: #b8e0f1;
+    text-indent: 50px;
+    line-height: 30px;
+}
+.container{
+    width: 70%;
+    height: 700px;
+    /*max-height: 2000px;*/
+    margin: 0 auto;/*表示上下为0，左右自动对齐的方式，也就是居中*/
+    background-color: #55b4e0;
+    /*position: absolute;*/
+    /*top: 10px;*/
+
+}
+
+
+.header{
+    width: 100%;
+    height: 50px;
+    background-color: #036EB7;
+    text-align: center;
+    line-height: 50px;
+}
+.footer{
+    width: 100%;
+    height: 100px;
+    background-color: #036EB7;
+    text-align: center;
+    line-height: 100px;
+}
+tr{
+    text-align: left;
+}
+
+.butt{
+    width: 100px;
+    height: 30px;
+    line-height: 15px;
+    background: #1fa4f0;
+    color: #ffffff;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    /*上面的属性是当指针指到该属性时，光标变成一只手*/
+    margin-top: 30px;
+
+}
+
+.text span{
+    font-weight: bold;
+    /*上述：加粗*/
+    color: #f00;
+}
+em{
+    font-style: normal;
+    /*上述效果是，无特效，因为之前是斜体显示，而我们不需要斜体*/
+}
